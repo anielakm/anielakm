@@ -4,12 +4,12 @@ import styled from "styled-components";
 const H3 = styled.h3`
   color: gray;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: ${({ small }) => (small ? "1px" : "2px")};
   font-weight: 400;
   text-align: center;
-  padding: 10px;
-  margin: 15px;
-  font-size: 24px;
+  padding: 0;
+  margin: ${({ small }) => (small ? "0px 0px 10px" : "15px 0 10px")};
+  font-size: ${({ small }) => (small ? "16px" : "24px")};
   font-family: "lato";
 
   @media (min-width: 1224px) {

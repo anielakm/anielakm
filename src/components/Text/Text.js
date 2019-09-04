@@ -8,7 +8,7 @@ const Text = styled.p`
   text-align: justify;
   font-size: 16px;
   font-family: "lato";
-
+  margin: 0;
   @media (min-width: 1224px) {
     font-size: 18px;
   }
