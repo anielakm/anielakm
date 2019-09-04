@@ -1,9 +1,7 @@
 export const theme = {
   fonts: {
     gv: "Great Vibes",
-    sacramento: "Sacramento",
-    paris: "Parisienne",
-    petit: "Petit Formal Script"
+    source: "Source Serif Pro"
   },
   colors: {
     baseBeige: "#dbcabb",
