@@ -1,5 +1,5 @@
 import React from "react";
-// import SingleProject from "../components/SingleProject";
+import SingleProject from "../components/SingleProject";
 import H3 from "../components/H3/H3";
 import styled from "styled-components";
 import { theme } from "../utilis/theme";
@@ -10,13 +10,15 @@ const ContainerProjects = styled.div`
   padding: 20px;
 `;
 
-// const portfolioCommercial = theme.imagesCommercial.map(item => (
-//   <SingleProject img={item} />
-// ));
-// const portfolioNonCommercial = theme.imagesNoncommercial.map(item => (
-//   <SingleProject img={item} />
-// ));
-
+const ProjectsList = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 15%;
+  }
+`;
 const Projects = props => (
   <StaticQuery
     query={graphql`
@@ -47,10 +49,39 @@ const Projects = props => (
     render={data => (
       <header>
         <ContainerProjects>
-          {console.log("data: ", data)}
+          {/* {console.log("data: ", data)} */}
           <H3>Portfolio</H3>
           <H3 small>Projekty komercyjne</H3>
+          <ProjectsList>
+            {data.allUtilisJson.edges[0].node.projects
+              .filter(item => item.isCommercial)
+              .map(item => (
+                <SingleProject
+                  key={item.name}
+                  name={item.name}
+                  desc={item.description}
+                  tech={item.technology}
+                  img={item.img}
+                />
+              ))}
+          </ProjectsList>
+          <br />
+          <br />
           <H3 small>Projekty niekomercyjne</H3>
+          <br />
+          <ProjectsList>
+            {data.allUtilisJson.edges[0].node.projects
+              .filter(item => !item.isCommercial)
+              .map(item => (
+                <SingleProject
+                  key={item.name}
+                  name={item.name}
+                  desc={item.description}
+                  tech={item.technology}
+                  img={item.img}
+                />
+              ))}
+          </ProjectsList>
         </ContainerProjects>
       </header>
     )}

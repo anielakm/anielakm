@@ -1,7 +1,11 @@
 export const theme = {
   fonts: {
     gv: "Great Vibes",
-    source: "Source Serif Pro"
+    source: "Source Serif Pro",
+    lato: "Lato",
+    open: "Open Sans",
+    pt: "PT Sans",
+    muli: "Muli"
   },
   colors: {
     baseBeige: "#dbcabb",

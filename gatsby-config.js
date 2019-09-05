@@ -21,6 +21,7 @@ module.exports = {
         path: `${__dirname}/src/utilis/images`
       }
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`
 

@@ -8,12 +8,17 @@ const H3 = styled.h3`
   font-weight: 400;
   text-align: center;
   padding: 0;
-  margin: ${({ small }) => (small ? "0px 0px 10px" : "15px 0 10px")};
+  margin: ${({ small }) => (small ? "10% 0 10%" : "8% 0 5%")};
   font-size: ${({ small }) => (small ? "16px" : "24px")};
   font-family: "lato";
 
+  @media (min-width: 768px) {
+    font-size: ${({ small }) => (small ? "22px" : "32px")};
+    margin: ${({ small }) => (small ? "5% 0 5%" : "8% 0 5%")};
+  }
+
   @media (min-width: 1224px) {
-    font-size: 36px;
+    margin: ${({ small }) => (small ? "1% 0 2%" : "8% 0 4%")};
   }
 `;
 

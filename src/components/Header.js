@@ -18,7 +18,7 @@ const H1 = styled.h1`
   font-family: ${theme.fonts.gv};
   font-weight: 200;
   margin: 2px;
-  font-size: 36px;
+  font-size: 34px;
 
   @media (min-width: 768px) {
     font-size: 58px;
@@ -61,6 +61,10 @@ const HR = styled.hr`
 
   @media (min-width: 380px) and (max-width: 768px) {
     width: 320px;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
   }
 `;
 

@@ -28,19 +28,20 @@
       "isCommercial": false,
       "img": { "src": "./images/akm.png" }
     },
-    {
-      "name": "Fruits & Vegetables",
-      "description": "Fruits & Vegetables - Gra typu memory napisana w języku Javascript. ",
-      "technology": "Prosta gra polegająca na zapamiętywaniu i odkrywaniu takich samych kart. Podczas rozgrywki odliczany jest czas, ilość wykonanych ruchów oraz ilość odsłoniętych par. Wykorzystane technologie: HTML, CSS, Bootstrap, JavaScript. Projekt strony został zaprojektowany i stworzony w programie Adobe Photoshop.",
-      "isCommercial": false,
-      "img": { "src": "./images/memorygame.png" }
-    },
+
     {
       "name": "NGNails",
       "description": "NGNails - blog o tematyce kosmetycznej.",
       "technology": "Blog oparty na systemie Wordpress. Technologie wykorzystane w projekcie: HTML, CSS, Bootstrap, PHP. Projekt strony został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": false,
       "img": { "src": "./images/ngn.png" }
+    },
+    {
+      "name": "Fruits & Vegetables",
+      "description": "Fruits & Vegetables - Gra typu memory napisana w języku Javascript. ",
+      "technology": "Prosta gra polegająca na zapamiętywaniu i odkrywaniu takich samych kart. Podczas rozgrywki odliczany jest czas, ilość wykonanych ruchów oraz ilość odsłoniętych par. Wykorzystane technologie: HTML, CSS, Bootstrap, JavaScript. Projekt strony został zaprojektowany i stworzony w programie Adobe Photoshop.",
+      "isCommercial": false,
+      "img": { "src": "./images/memorygame.png" }
     }
   ]
 }

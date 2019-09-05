@@ -9,6 +9,7 @@ import Highlight from "../components/Highlight/Highlight";
 
 const AboutContainer = styled.div`
   background-color: ${theme.colors.baseBeige};
+  position: relative;
 
   @media (min-width: 769px) {
     background-image: url(${ImageAbout});
@@ -26,12 +27,26 @@ const Img = styled.img`
 `;
 
 const AboutText = styled.div`
+  padding: 0 8% 8%;
+
   @media (min-width: 769px) {
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
     width: 50%;
-    float: right;
     background-color: ${theme.colors.baseBeige};
-    padding: 10px;
-    margin: 20% 3%;
+  }
+  @media (min-width: 1024px) {
+    margin: 10% 3%;
+    padding: 0 3% 4%;
+  }
+  @media (min-width: 1224px) {
+    margin: 10% 3%;
+    padding: 0 3% 4%;
+    width: 40%;
   }
 `;
 
@@ -57,7 +72,7 @@ const About = () => {
             <Highlight>realizowanych przeze mnie projektach</Highlight>.
             <br />
             <br />
-            Pozostałe zainteresowania, które realizuję w czasie wolnym to:
+            Pozostałe zainteresowania, które realizuję w czasie wolnym to:{" "}
             <Highlight>tworzenie oraz montaż filmów</Highlight>,{" "}
             <Highlight>marketing internetowy</Highlight>,{" "}
             <Highlight>personal branding</Highlight> oraz{" "}

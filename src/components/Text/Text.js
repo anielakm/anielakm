@@ -1,16 +1,25 @@
 import styled from "styled-components";
-// import { theme } from "../../utilis/theme";
+import { theme } from "../../utilis/theme";
 
 const Text = styled.p`
   color: gray;
   font-weight: 300;
-  padding: 0 30px 20px;
   text-align: justify;
   font-size: 16px;
-  font-family: "lato";
+  font-family: ${theme.fonts.lato};
   margin: 0;
-  @media (min-width: 1224px) {
+  font-weight: 300;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media (min-width: 1024px) {
     font-size: 18px;
+  }
+
+  @media (min-width: 1224px) {
+    font-size: ${({ small }) => (small ? "17px" : "20px")};
   }
 `;
 
