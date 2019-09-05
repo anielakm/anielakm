@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../utilis/theme";
 import H3 from "../components/H3/H3";
+import Recaptcha from "react-recaptcha";
 
 const ContactContainer = styled.div`
   background-color: ${theme.colors.darkBeige};
-  padding: 3%;
+  padding: 3% 5%;
   font-family: ${theme.fonts.lato};
 
   @media (min-width: 1024px) {
@@ -14,12 +15,11 @@ const ContactContainer = styled.div`
 `;
 
 const Form = styled.form`
-  width: 70%;
-  margin: 0 15%;
-
-  @media (min-width: 1024px) {
-    display: flex;
-  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 `;
 
 const Inputs = styled.div`
@@ -28,11 +28,18 @@ const Inputs = styled.div`
   padding: 5%;
   margin: 1% 0;
   border-radius: 5px;
-  opacity: 0.9;
+
+  text-align: center;
+
+  div {
+    margin: auto;
+    padding: auto;
+  }
 
   input {
     margin: 0 0 3% 0;
-    width: 100%;
+    width: 304px;
+
     color: gray;
     padding: 3%;
     font-size: 12px;
@@ -54,8 +61,13 @@ const Inputs = styled.div`
   }
 
   @media (min-width: 1024px) {
-    padding: 3%;
-    width: 38%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    input {
+      width: 304px;
+    }
   }
 `;
 
@@ -66,7 +78,9 @@ const Message = styled.div`
   margin: 1% 0;
   text-align: center;
   border-radius: 5px;
-  opacity: 0.9;
+
+  @media (min-width: 768px) {
+  }
 
   textarea {
     width: 100%;
@@ -83,9 +97,14 @@ const Message = styled.div`
     }
 
     @media (min-width: 768px) {
-      font-size: 14px;
       padding: 2%;
       line-height: 18px;
+      width: 304px;
+    }
+    @media (min-width: 1024px) {
+      padding: 2%;
+      line-height: 18px;
+      width: 100%;
     }
   }
 
@@ -115,7 +134,7 @@ const Message = styled.div`
     }
 
     @media (min-width: 768px) {
-      font-size: 12px;
+      font-size: 10px;
       letter-spacing: 2px;
       margin-top: 4%;
       padding: 2% 4%;
@@ -123,13 +142,16 @@ const Message = styled.div`
   }
 
   @media (min-width: 1024px) {
-    padding: 3%;
-    width: 58%;
+    padding: 2%;
     margin: 1%;
-
+    width: 50%;
     button {
       font-size: 11px;
     }
+  }
+
+  @media (min-width: 1224px) {
+    width: 600px;
   }
 `;
 
@@ -141,10 +163,13 @@ const Contact = () => {
         <Form method="post">
           <Inputs>
             <input type="text" placeholder="name" />
+            <br />
             <input type="text" placeholder="e-mail" />
+            <Recaptcha sitekey="6LeF6HkUAAAAAJnN8s1a8d4GgB3OFN-m0uBJA6IV" />
           </Inputs>
           <Message>
             <textarea placeholder="Treść wiadomości ..."></textarea>
+            <br />
             <button>Wyślij wiadomość</button>
           </Message>
         </Form>
