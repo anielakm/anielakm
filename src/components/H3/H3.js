@@ -2,7 +2,7 @@ import styled from "styled-components";
 // import { theme } from "../../utilis/theme";
 
 const H3 = styled.h3`
-  color: gray;
+  color: ${({ light }) => (light ? "white" : "gray")};
   text-transform: uppercase;
   letter-spacing: ${({ small }) => (small ? "1px" : "2px")};
   font-weight: 400;
