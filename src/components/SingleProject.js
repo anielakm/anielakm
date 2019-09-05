@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import { theme } from "../utilis/theme";
 import Text from "../components/Text/Text";
 import Highlight from "../components/Highlight/Highlight";
 

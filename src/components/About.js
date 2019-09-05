@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../utilis/images/about_small.jpg";
-import ImageAbout from "../utilis/images/about.jpg";
+import Image from "../../public/static/images/about_small.jpg";
+import ImageAbout from "../../public/static/images/about.jpg";
 import { theme } from "../utilis/theme";
 import H3 from "../components/H3/H3";
 import Text from "../components/Text/Text";
