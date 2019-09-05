@@ -7,11 +7,19 @@ const ContactContainer = styled.div`
   background-color: ${theme.colors.darkBeige};
   padding: 3%;
   font-family: ${theme.fonts.lato};
+
+  @media (min-width: 1024px) {
+    padding: 1% 2% 2% 2%;
+  }
 `;
 
 const Form = styled.form`
-  width: 80%;
-  margin: 0 10%;
+  width: 70%;
+  margin: 0 15%;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
 `;
 
 const Inputs = styled.div`
@@ -19,12 +27,34 @@ const Inputs = styled.div`
   opacity: 0.9;
   padding: 5%;
   margin: 1% 0;
+  border-radius: 5px;
+  opacity: 0.9;
+
   input {
-    margin: 2% 0;
+    margin: 0 0 3% 0;
     width: 100%;
     color: gray;
-    padding: 2%;
+    padding: 3%;
     font-size: 12px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+
+    &:active,
+    &:focus {
+      outline: 1px solid ${theme.colors.darkBeige};
+      border: 1px solid ${theme.colors.darkBeige};
+    }
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      padding: 3%;
+      margin: 0 0 4% 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 3%;
+    width: 38%;
   }
 `;
 
@@ -33,26 +63,70 @@ const Message = styled.div`
   opacity: 0.9;
   padding: 5%;
   margin: 1% 0;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0.9;
 
   textarea {
     width: 100%;
     color: gray;
-    padding: 2%;
+    padding: 4%;
     font-size: 12px;
     height: 150px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    &:active,
+    &:focus {
+      outline: 1px solid ${theme.colors.darkBeige};
+      border: 1px solid ${theme.colors.darkBeige};
+    }
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   button {
     background-color: ${theme.colors.darkBeige};
-    border: 1px solid ${theme.colors.darkBeige};
-    width: 100%;
+    border: 2px solid ${theme.colors.darkBeige};
+    border-radius: 30px;
+    padding: 4% 9%;
     color: white;
     letter-spacing: 1px;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
-    line-height: 24px;
-    margin-top: 2%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+
+    margin-top: 4%;
+    outline: none;
+
+    transition: background-color 1s, color 0.3s, font-weight 0.3s, box-shadow 1s;
+
+    :hover {
+      background-color: ${theme.colors.baseBeige};
+      color: ${theme.colors.darkBeige};
+      cursor: pointer;
+      font-weight: 500;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-top: 4%;
+      padding: 3% 7%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 3%;
+    width: 58%;
+    margin: 1%;
+
+    button {
+      font-size: 11px;
+    }
   }
 `;
 

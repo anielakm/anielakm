@@ -10,6 +10,10 @@ const FooterContainer = styled.div`
   font-size: 10px;
   text-align: center;
   padding: 2%;
+
+  @media (min-width: 1024px) {
+    font-size: 11px;
+  }
 `;
 const Footer = () => {
   return (
