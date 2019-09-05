@@ -160,15 +160,19 @@ const Contact = () => {
     <>
       <ContactContainer>
         <H3 light>Kontakt</H3>
-        <Form method="post">
+        <Form action="https://formspree.io/kontakt@anielakm.pl" method="POST">
           <Inputs>
-            <input type="text" placeholder="name" />
+            <input type="text" placeholder="name" name="name" />
             <br />
-            <input type="text" placeholder="e-mail" />
+            <input type="text" placeholder="e-mail" name="mail" required />
             <Recaptcha sitekey="6LeF6HkUAAAAAJnN8s1a8d4GgB3OFN-m0uBJA6IV" />
           </Inputs>
           <Message>
-            <textarea placeholder="Treść wiadomości ..."></textarea>
+            <textarea
+              placeholder="Treść wiadomości ..."
+              name="message"
+              required
+            ></textarea>
             <br />
             <button>Wyślij wiadomość</button>
           </Message>
