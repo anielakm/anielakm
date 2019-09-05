@@ -46,9 +46,10 @@ const Inputs = styled.div`
     }
 
     @media (min-width: 768px) {
-      font-size: 16px;
-      padding: 3%;
       margin: 0 0 4% 0;
+      font-size: 14px;
+      padding: 2%;
+      line-height: 22px;
     }
   }
 
@@ -82,7 +83,9 @@ const Message = styled.div`
     }
 
     @media (min-width: 768px) {
-      font-size: 16px;
+      font-size: 14px;
+      padding: 2%;
+      line-height: 18px;
     }
   }
 
@@ -112,10 +115,10 @@ const Message = styled.div`
     }
 
     @media (min-width: 768px) {
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: 2px;
       margin-top: 4%;
-      padding: 3% 7%;
+      padding: 2% 4%;
     }
   }
 

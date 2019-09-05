@@ -15,7 +15,7 @@ const Text = styled.p`
   }
 
   @media (min-width: 1024px) {
-    font-size: 18px;
+    font-size: ${({ small }) => (small ? "14px" : "18px")};
   }
 
   @media (min-width: 1224px) {

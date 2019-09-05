@@ -8,6 +8,10 @@ import { StaticQuery, graphql } from "gatsby";
 const ContainerProjects = styled.div`
   background-color: ${theme.colors.pistachio};
   padding: 20px;
+
+  @media (min-width: 1024px) {
+    padding-bottom: 5%;
+  }
 `;
 
 const ProjectsList = styled.div`
@@ -65,10 +69,9 @@ const Projects = props => (
                 />
               ))}
           </ProjectsList>
-          <br />
-          <br />
+
           <H3 small>Projekty niekomercyjne</H3>
-          <br />
+
           <ProjectsList>
             {data.allUtilisJson.edges[0].node.projects
               .filter(item => !item.isCommercial)

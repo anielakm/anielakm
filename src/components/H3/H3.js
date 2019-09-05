@@ -14,11 +14,11 @@ const H3 = styled.h3`
 
   @media (min-width: 768px) {
     font-size: ${({ small }) => (small ? "22px" : "32px")};
-    margin: ${({ small }) => (small ? "5% 0 5%" : "8% 0 5%")};
+    margin: ${({ small }) => (small ? " 3% " : "8% 0 5%")};
   }
 
   @media (min-width: 1224px) {
-    margin: ${({ small }) => (small ? "1% 0 2%" : "8% 0 4%")};
+    margin: ${({ small }) => (small ? "3%" : "4% 0 ")};
   }
 `;
 

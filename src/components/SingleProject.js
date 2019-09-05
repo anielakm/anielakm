@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 // import { theme } from "../utilis/theme";
 import Text from "../components/Text/Text";
+import Highlight from "../components/Highlight/Highlight";
 
 const ProjectImg = styled.div`
   height: 250px;
   background-color: white;
   background: url(${props => props.src}) no-repeat top center;
   background-size: cover;
-  margin: 10px 0;
   border: 5px solid white;
 
   transition: background-position 3s;
@@ -17,20 +17,28 @@ const ProjectImg = styled.div`
   }
 
   @media (min-width: 768px) {
-    height: 300px;
+    height: 200px;
   }
 
   @media (min-width: 1024px) {
-    height: 300px;
+    height: 180px;
+  }
+
+  @media (min-width: 1224px) {
+    height: 220px;
+  }
+  @media (min-width: 1424px) {
+    height: 250px;
   }
 `;
 
 const ProjectDesc = styled.div`
-  background-color: white;
   padding: 8%;
 `;
 
 const ProjectContainer = styled.div`
+  background-color: white;
+  margin-bottom: 6%;
   @media (min-width: 768px) {
     width: 48%;
     margin: 1%;
@@ -46,7 +54,11 @@ const SingleProject = props => {
     <ProjectContainer>
       <ProjectImg src={props.img.src.childImageSharp.fluid.src}></ProjectImg>
       <ProjectDesc>
-        <Text small>{props.desc}</Text>
+        {" "}
+        <Text small>
+          {" "}
+          <Highlight>{props.desc}</Highlight>
+        </Text>
         <br />
         <Text small>{props.tech}</Text>
       </ProjectDesc>
