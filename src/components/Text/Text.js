@@ -8,7 +8,6 @@ const Text = styled.p`
   font-size: 16px;
   font-family: ${theme.fonts.lato};
   margin: 0;
-  font-weight: 300;
 
   @media (min-width: 768px) {
     font-size: 22px;
