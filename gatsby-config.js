@@ -9,6 +9,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
     `gatsby-plugin-recaptcha`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,10 +23,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/utilis/images`
       }
-    },
-
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    }
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
