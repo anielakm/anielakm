@@ -160,7 +160,7 @@ const Contact = () => {
     <>
       <ContactContainer>
         <H3 light>Kontakt</H3>
-        <Form action="https://formspree.io/kontakt@anielakm.pl" method="POST">
+        <Form method="post" netlify-honeypot="bot-field" data-netlify="true">
           <Inputs>
             <input type="text" placeholder="name" name="name" />
             <br />
