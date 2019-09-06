@@ -27,7 +27,7 @@ const Projects = props => (
   <StaticQuery
     query={graphql`
       {
-        allStaticJson {
+        allUtilisJson {
           edges {
             node {
               projects {
@@ -56,7 +56,7 @@ const Projects = props => (
           <H3>Portfolio</H3>
           <H3 small>Projekty komercyjne</H3>
           <ProjectsList>
-            {data.allStaticJson.edges[0].node.projects
+            {data.allUtilisJson.edges[0].node.projects
               .filter(item => item.isCommercial)
               .map(item => (
                 <SingleProject
@@ -72,7 +72,7 @@ const Projects = props => (
           <H3 small>Projekty niekomercyjne</H3>
 
           <ProjectsList>
-            {data.allStaticJson.edges[0].node.projects
+            {data.allUtilisJson.edges[0].node.projects
               .filter(item => !item.isCommercial)
               .map(item => (
                 <SingleProject
