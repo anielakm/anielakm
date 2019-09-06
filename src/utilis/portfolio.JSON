@@ -51,7 +51,7 @@
       "technology": "Prosta gra polegająca na zapamiętywaniu i odkrywaniu takich samych kart. Podczas rozgrywki odliczany jest czas, ilość wykonanych ruchów oraz ilość odsłoniętych par. Wykorzystane technologie: HTML, CSS, Bootstrap, JavaScript. Projekt strony został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": false,
       "img": { "src": "./images/memorygame.png" },
-      "url": "../../static/memoryGame",
+      "url": "http://htmlpreview.github.io/?https://github.com/anielakm/memoryGame/blob/master/index.html",
       "urlGithub": "none"
     }
   ]
