@@ -5,28 +5,35 @@
       "description": "EWI - strona internetowa firmy EWI zajmującej się sprzedażą ubrań i pościeli dla niemowląt. ",
       "technology": "Technologie wykorzystane do stworzenia strony: Yeoman, Gulp, Bower, HTML, SASS, Bootstrap. Strona jest dostosowana do wyświetlania zarowno na małych jak i dużych urządzeniach (spełnia standardy RWD). Projekt witryny został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": true,
-      "img": { "src": "./images/ewi.png" }
+      "img": { "src": "./images/ewi.png" },
+      "url": "http://ewiradom.pl",
+      "urlGithub": "none"
     },
     {
       "name": "Chełmińska",
       "description": "Chełmińska - strona internetowa pierkani i cukierni Chełmińska. ",
       "technology": "Technologie wykorzystane do stworzenia strony: Yeoman, Gulp, Bower, HTML, SASS, Bootstrap. Strona jest dostosowana do wyświetlania zarowno na małych jak i dużych urządzeniach (spełnia standardy RWD). Projekt witryny został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": true,
-      "img": { "src": "./images/chelminska.png" }
+      "img": { "src": "./images/chelminska.png" },
+      "url": "http://chelminska.pl",
+      "urlGithub": "none"
     },
     {
       "name": "Jawar",
       "description": "Jawar - strona internetowa firmy Jawar zajmującej się sprzedażą nieruchomości. ",
       "technology": "Technologie wykorzystane do stworzenia strony: Yeoman, Gulp, Bower, HTML, SASS, Bootstrap. Strona jest dostosowana do wyświetlania zarowno na małych jak i dużych urządzeniach (spełnia standardy RWD). Projekt witryny został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": true,
-      "img": { "src": "./images/jawar.png" }
+      "img": { "src": "./images/jawar.png" },
+      "url": "http://nieruchomoscijawar.pl/",
+      "urlGithub": "none"
     },
     {
       "name": "Anielakm",
       "description": "Anielakm - strona internetowa portfolio. ",
       "technology": "Technologie wykorzystane do stworzenia strony: React, Gatsby.js, Styled Components. Strona jest dostosowana do wyświetlania zarowno na małych jak i dużych urządzeniach (spełnia standardy RWD). Projekt witryny został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": false,
-      "img": { "src": "./images/akm.png" }
+      "img": { "src": "./images/akm.png" },
+      "urlGithub": "https://github.com/anielakm/anielakm"
     },
 
     {
@@ -34,14 +41,18 @@
       "description": "NGNails - blog o tematyce kosmetycznej.",
       "technology": "Blog oparty na systemie Wordpress. Technologie wykorzystane w projekcie: HTML, CSS, Bootstrap, PHP. Projekt strony został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": false,
-      "img": { "src": "./images/ngn.png" }
+      "img": { "src": "./images/ngn.png" },
+      "url": "http://ngnails.pl",
+      "urlGithub": "none"
     },
     {
       "name": "Fruits & Vegetables",
       "description": "Fruits & Vegetables - Gra typu memory napisana w języku Javascript. ",
       "technology": "Prosta gra polegająca na zapamiętywaniu i odkrywaniu takich samych kart. Podczas rozgrywki odliczany jest czas, ilość wykonanych ruchów oraz ilość odsłoniętych par. Wykorzystane technologie: HTML, CSS, Bootstrap, JavaScript. Projekt strony został zaprojektowany i stworzony w programie Adobe Photoshop.",
       "isCommercial": false,
-      "img": { "src": "./images/memorygame.png" }
+      "img": { "src": "./images/memorygame.png" },
+      "url": "/memorygame",
+      "urlGithub": "none"
     }
   ]
 }

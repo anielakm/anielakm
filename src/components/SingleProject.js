@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Text from "../components/Text/Text";
 import Highlight from "../components/Highlight/Highlight";
+import Button from "../components/Button/Button";
 
 const ProjectImg = styled.div`
   height: 250px;
@@ -32,11 +33,16 @@ const ProjectImg = styled.div`
 `;
 
 const ProjectDesc = styled.div`
-  padding: 8%;
+  padding: 7%;
 `;
 
 const ProjectContainer = styled.div`
-  background-color: white;
+  .center {
+    text-align: center;
+  }
+
+  background-color: rgba(255, 255, 255, 0.8);
+
   margin-bottom: 6%;
   @media (min-width: 768px) {
     width: 48%;
@@ -51,7 +57,9 @@ const ProjectContainer = styled.div`
 const SingleProject = props => {
   return (
     <ProjectContainer>
-      <ProjectImg src={props.img.src.childImageSharp.fluid.src}></ProjectImg>
+      <a href={props.url} target="blank">
+        <ProjectImg src={props.img.src.childImageSharp.fluid.src}></ProjectImg>
+      </a>
       <ProjectDesc>
         {" "}
         <Text small>
@@ -60,6 +68,18 @@ const SingleProject = props => {
         </Text>
         <br />
         <Text small>{props.tech}</Text>
+        <div className="center">
+          <Button>
+            <a href={props.url}>Przejdź na stronę</a>
+          </Button>
+          {props.urlGithub === "none" ? null : (
+            <Button git>
+              <a href={props.urlGithub} target="blank">
+                Kod Github
+              </a>
+            </Button>
+          )}
+        </div>
       </ProjectDesc>
     </ProjectContainer>
   );

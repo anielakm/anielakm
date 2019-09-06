@@ -9,6 +9,7 @@ export const theme = {
   },
   colors: {
     baseBeige: "#dbcabb",
+    baseBeigeLight: "#ede4dd",
     darkBeige: "#998f83",
     pistachio: "#dbd3bb",
     warmBeige: "#dbc5bb",

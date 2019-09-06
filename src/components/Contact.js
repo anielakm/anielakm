@@ -126,7 +126,7 @@ const Message = styled.div`
     transition: background-color 1s, color 0.3s, font-weight 0.3s, box-shadow 1s;
 
     :hover {
-      background-color: ${theme.colors.baseBeige};
+      background-color: rgba(255, 255, 255, 0.3);
       color: ${theme.colors.darkBeige};
       cursor: pointer;
       font-weight: 500;

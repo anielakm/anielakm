@@ -35,6 +35,8 @@ const Projects = props => (
                 description
                 technology
                 isCommercial
+                url
+                urlGithub
                 img {
                   src {
                     childImageSharp {
@@ -65,6 +67,8 @@ const Projects = props => (
                   desc={item.description}
                   tech={item.technology}
                   img={item.img}
+                  url={item.url}
+                  urlGithub={item.urlGithub}
                 />
               ))}
           </ProjectsList>
@@ -81,6 +85,8 @@ const Projects = props => (
                   desc={item.description}
                   tech={item.technology}
                   img={item.img}
+                  url={item.url}
+                  urlGithub={item.urlGithub}
                 />
               ))}
           </ProjectsList>
