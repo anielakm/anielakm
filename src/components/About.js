@@ -45,7 +45,7 @@ const AboutText = styled.div`
   }
   @media (min-width: 1224px) {
     margin: 10% 3%;
-    padding: 3% 4%;
+    padding: 2% 3% 3%;
     width: 40%;
   }
 `;

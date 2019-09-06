@@ -13,12 +13,13 @@ const H3 = styled.h3`
   font-family: "lato";
 
   @media (min-width: 768px) {
-    font-size: ${({ small }) => (small ? "22px" : "32px")};
+    font-size: ${({ small }) => (small ? "22px" : "28px")};
     margin: ${({ small }) => (small ? " 3% " : "8% 0 5%")};
   }
 
   @media (min-width: 1224px) {
-    margin: ${({ small }) => (small ? "3%" : "4% 0 ")};
+    margin: ${({ small }) => (small ? "3%" : "3% 0")};
+    font-size: ${({ small }) => (small ? "20px" : "26px")};
   }
 `;
 
