@@ -12,14 +12,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./public/static`
+        path: `${__dirname}/src/utilis`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `./public/static/images`
+        path: `${__dirname}/src/utilis/images`
       }
     },
 
