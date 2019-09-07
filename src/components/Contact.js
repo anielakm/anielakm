@@ -160,11 +160,11 @@ const Contact = () => {
     <>
       <ContactContainer>
         <H3 light>Kontakt</H3>
-        <Form method="post" netlify-honeypot="bot-field" data-netlify="true">
+        <Form method="POST" netlify-honeypot="bot-field" data-netlify="true" name="contact">
           <Inputs>
             <input type="text" placeholder="name" name="name" />
             <br />
-            <input type="text" placeholder="e-mail" name="mail" required />
+            <input type="email" placeholder="e-mail" name="mail" required />
             <Recaptcha sitekey="6LeF6HkUAAAAAJnN8s1a8d4GgB3OFN-m0uBJA6IV" />
           </Inputs>
           <Message>
@@ -174,7 +174,7 @@ const Contact = () => {
               required
             ></textarea>
             <br />
-            <button>Wyślij wiadomość</button>
+            <button type="submit">Wyślij wiadomość</button>
           </Message>
         </Form>
       </ContactContainer>
