@@ -163,9 +163,11 @@ const Contact = () => {
         <Form
           name="contact"
           method="post"
-          action="/success"
+          action="/thanks/"
           data-netlify="true"
-          data-netlify-honeypot="bot-field">
+          data-netlify-honeypot="bot-field"
+        // onSubmit={handleSubmit}
+        >
           <input type="hidden" name="form-name" value="contact" />
           <Inputs>
             <input type="text" placeholder="name" name="name" />
