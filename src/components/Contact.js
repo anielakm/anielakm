@@ -160,7 +160,7 @@ const Contact = () => {
     <>
       <ContactContainer>
         <H3 light>Kontakt</H3>
-        <Form method="POST" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+        <Form method="POST" data-netlify-honeypot="bot-field" data-netlify="true" name="contact">
           <Inputs>
             <input type="text" placeholder="name" name="name" />
             <br />
