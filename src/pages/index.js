@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import Header from "../components/Header";
 import About from "../components/About";
 import Projects from "../components/Projects";
-import Contact from "../components/Contact";
+import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
 const Global = createGlobalStyle`
@@ -23,7 +23,7 @@ const IndexPage = () => (
     <Header />
     <About />
     <Projects />
-    <Contact />
+    <ContactForm />
     <Footer />
   </>
 );
