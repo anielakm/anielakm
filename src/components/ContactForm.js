@@ -5,6 +5,7 @@ import { theme } from "../utilis/theme";
 import H3 from "../components/H3/H3";
 
 const Success = styled.aside`
+display:none;
 position:fixed;
 height:100vh;
 width:100vw;
