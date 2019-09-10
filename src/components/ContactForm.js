@@ -248,17 +248,19 @@ export default function ContactForm() {
 
   const handleOpen = () => {
     document.querySelector('.success').style.display = 'block';
+    document.querySelector('.header').innerHTML = "Wiadomość wysłana";
+    document.querySelector('.message').innerHTML = "Dziękuję, wiadomość została wysłana poprawnie.";
   }
   const handleRecError = () => {
     document.querySelector('.success').style.display = 'block';
     document.querySelector('.header').innerHTML = "Błąd wysyłania wiadomości";
-    document.querySelector('.message').innerHTML = "Błąd. Zaznacz pole reCaptcha.";
+    document.querySelector('.message').innerHTML = "Błąd, zaznacz pole reCaptcha.";
   }
 
 
   return (
     <ContactContainer>
-      <Success className="success" onClick={handleClose}><div><H3 className="header">Wiadomość wysłana</H3><p className="message">Dziękuję, wiadomość została wysłana poprawnie.</p><span onClick={handleClose}>x</span></div></Success>
+      <Success className="success" onClick={handleClose}><div><H3 className="header">Naglowek</H3><p className="message">Tresc wiadomosci</p><span onClick={handleClose}>x</span></div></Success>
       <H3 light>Kontakt</H3>
       <Form
         name="contact-recaptcha"
