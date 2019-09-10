@@ -238,7 +238,7 @@ export default function ContactForm() {
       }),
     })
       .then(response => response.redirected)
-      .then(response => response ? handleOpen() : handleRecError())
+      .then(response => !response ? handleOpen() : handleRecError())
       .catch((error) => alert(error))
   }
 
@@ -251,14 +251,14 @@ export default function ContactForm() {
   }
   const handleRecError = () => {
     document.querySelector('.success').style.display = 'block';
-    document.querySelector('.success > h3').innerHTML = "Błąd wysyłania wiadomości";
-    document.querySelector('.success > p').innerHTML = "Błąd. Zaznacz pole reCaptcha.";
+    document.querySelector('.header').innerHTML = "Błąd wysyłania wiadomości";
+    document.querySelector('.message').innerHTML = "Błąd. Zaznacz pole reCaptcha.";
   }
 
 
   return (
     <ContactContainer>
-      <Success className="success" onClick={handleClose}><div><H3>Wiadomość wysłana</H3><p>Dziękuję, wiadomość została wysłana poprawnie.</p><span onClick={handleClose}>x</span></div></Success>
+      <Success className="success" onClick={handleClose}><div><H3 className="header">Wiadomość wysłana</H3><p className="message">Dziękuję, wiadomość została wysłana poprawnie.</p><span onClick={handleClose}>x</span></div></Success>
       <H3 light>Kontakt</H3>
       <Form
         name="contact-recaptcha"
