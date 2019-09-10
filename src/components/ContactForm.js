@@ -19,14 +19,18 @@ border-radius:10px;
 display:block;
 background-color:white;
 z-index:99;
-min-height:15vh;
-min-width:30%;
+min-height:30vh;
+min-width:80%;
 text-align:center;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-padding:2%;
+
+@media(min-width:920px){
+min-width:30%;
+}
+
 
   position: fixed;
     top: 50%;
@@ -42,6 +46,7 @@ padding:2%;
     p{
       padding:1%;
       color:gray;
+      display:inline-block;
     }
     
     span{
@@ -57,6 +62,10 @@ padding:2%;
       padding:2% 3%;
       font-weight:500;
       font-size:22px;
+
+      :hover{
+        cursor:pointer;
+      }
     }}
 
 `;
