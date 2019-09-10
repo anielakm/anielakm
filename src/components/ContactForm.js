@@ -238,12 +238,21 @@ export default function ContactForm() {
       }),
     })
       .then(response => console.log(response))
-      .then(() => document.querySelector('.success').style.display = 'block')
+      .then(() => response.redirected ? handleOpen() : handleRecError())
       .catch((error) => alert(error))
   }
 
   const handleClose = () => {
     document.querySelector('.success').style.display = 'none';
+  }
+
+  const handleOpen = () => {
+    document.querySelector('.success').style.display = 'block';
+  }
+  const handleRecError = () => {
+    document.querySelector('.success').style.display = 'block';
+    document.querySelector('.success > h3').innerHTML = "Błąd wysyłania wiadomości";
+    document.querySelector('.success > p').innerHTML = "Błąd. Zaznacz pole reCaptcha.";
   }
 
 
