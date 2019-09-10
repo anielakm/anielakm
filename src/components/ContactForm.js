@@ -237,8 +237,8 @@ export default function ContactForm() {
         ...state,
       }),
     })
-      .then(response => console.log(response))
-      .then(response => response.Response.redirected ? handleOpen() : handleRecError())
+      .then(response => console.log(response.redirected))
+      .then(response => response ? handleOpen() : handleRecError())
       .catch((error) => alert(error))
   }
 
