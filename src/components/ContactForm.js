@@ -237,7 +237,7 @@ export default function ContactForm() {
         ...state,
       }),
     })
-      .then(() => document.querySelector('.success').style.display = 'none')
+      .then(() => document.querySelector('.success').style.display = 'block')
       .catch((error) => alert(error))
   }
 
