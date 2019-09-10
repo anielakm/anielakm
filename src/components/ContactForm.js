@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { theme } from "../utilis/theme";
 import H3 from "../components/H3/H3";
-import Recaptcha from "react-recaptcha";
+import Recaptcha from 'react-google-recaptcha'
 
 const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
 if (typeof RECAPTCHA_KEY === 'undefined') {
