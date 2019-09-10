@@ -237,7 +237,7 @@ export default function ContactForm() {
         ...state,
       }),
     })
-      .then(() => handleOpen())
+      .then(() => document.querySelector('.success').style.display = 'none')
       .catch((error) => alert(error))
   }
 
@@ -245,9 +245,6 @@ export default function ContactForm() {
     document.querySelector('.success').style.display = 'none';
   }
 
-  const handleOpen = () => {
-    document.querySelector('.success').style.display = 'none';
-  }
 
   return (
     <ContactContainer>
