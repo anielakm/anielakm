@@ -6,7 +6,7 @@ import Recaptcha from 'react-google-recaptcha'
 
 const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
 if (typeof RECAPTCHA_KEY === 'undefined') {
-    throw new Error(`
+  throw new Error(`
   Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined! 
   You probably forget to set it in your Netlify build environment variables. 
   Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
@@ -174,75 +174,76 @@ const Message = styled.div`
 
 
 function encode(data) {
-    return Object.keys(data)
-        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
-export default function Contact() {
-    const [state, setState] = React.useState({})
+export default function ContactForm() {
+  const [state, setState] = React.useState({})
+  const recaptchaRef = React.createRef()
 
-    const handleChange = (e) => {
-        setState({ ...state, [e.target.name]: e.target.value })
-    }
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = e.target
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': form.getAttribute('name'),
-                ...state,
-            }),
-        })
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
 
-            .catch((error) => alert(error))
-    }
+      .catch((error) => alert(error))
+  }
 
-    return (
-        <ContactContainer>
-            <H3 light>Kontakt</H3>
-            <Form
+  return (
+    <ContactContainer>
+      <H3 light>Kontakt</H3>
+      <Form
 
-                name="contact"
-                method="post"
-                action="/thanks/"
-                data-netlify="true"
-                data-netlify-recaptcha="true"
-                onSubmit={handleSubmit}
-            >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
+        name="contact"
+        method="post"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+        onSubmit={handleSubmit}
+      >
+        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+        <input type="hidden" name="form-name" value="contact" />
 
-                <p hidden>
-                    <label>
-                        Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-                    </label>
-                </p>
-                <Inputs>
+        <p hidden>
+          <label>
+            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+          </label>
+        </p>
+        <Inputs>
 
-                    <label > Imię: <br />
-                        <input type="text" name="name" onChange={handleChange} placeholder="imię" />
-                    </label>
-                    <br />
+          <label > Imię: <br />
+            <input type="text" name="name" onChange={handleChange} placeholder="imię" />
+          </label>
+          <br />
 
-                    <label htmlFor="">E-mail: <br />
-                        <input type="email" name="email" onChange={handleChange} placeholder="email" />
-                    </label>
+          <label htmlFor="">E-mail: <br />
+            <input type="email" name="email" onChange={handleChange} placeholder="email" />
+          </label>
 
-                    <br /> <label>  <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} /></label>
+          <br /> <label>  <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} /></label>
 
-                </Inputs>
-                <Message>
+        </Inputs>
+        <Message>
 
-                    <br />
-                    <textarea name="message" onChange={handleChange} placeholder="Treść wiadomości ..." /> <br />
-                    <button type="submit">Wyślij wiadomość</button>
+          <br />
+          <textarea name="message" onChange={handleChange} placeholder="Treść wiadomości ..." /> <br />
+          <button type="submit">Wyślij wiadomość</button>
 
-                </Message>
-            </Form>
-        </ContactContainer>
-    )
+        </Message>
+      </Form>
+    </ContactContainer>
+  )
 }
