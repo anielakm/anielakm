@@ -4,6 +4,62 @@ import styled from "styled-components";
 import { theme } from "../utilis/theme";
 import H3 from "../components/H3/H3";
 
+const Success = styled.aside`
+position:fixed;
+height:100vh;
+width:100vw;
+background-color:rgba(0,0,0,0.35);
+top:0;
+left:0;
+z-index:2;
+
+div{
+border-radius:10px;
+display:block;
+background-color:white;
+z-index:99;
+min-height:15vh;
+min-width:30%;
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:2%;
+
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+    p{
+      padding:1%;
+      color:gray;
+    }
+    
+    span{
+      position:absolute;
+      right:-3%;
+      top:-5%;
+      background-color:${theme.colors.baseBeige};
+      
+      border-radius:50px;
+      color:gray;
+      text-align:center;
+      line-height:22px;
+      padding:2% 3%;
+      font-weight:500;
+      font-size:22px;
+    }}
+
+`;
+
 const ContactContainer = styled.div`
   background-color: ${theme.colors.darkBeige};
   padding: 3% 5%;
@@ -24,7 +80,7 @@ const Inputs = styled.div`
   background-color: ${theme.colors.baseBeige};
   opacity: 0.9;
   padding: 5%;
-  margin: 1% 0;
+  margin: 1%;
   border-radius: 5px;
   label{
       font-size:14px;
@@ -180,12 +236,21 @@ export default function ContactForm() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => handleOpen())
       .catch((error) => alert(error))
+  }
+
+  const handleClose = () => {
+    document.querySelector('.success').style.display = 'none';
+  }
+
+  const handleOpen = () => {
+    document.querySelector('.success').style.display = 'none';
   }
 
   return (
     <ContactContainer>
+      <Success className="success" onClick={handleClose}><div><H3>Wiadomość wysłana</H3><p>Dziękuję, wiadomość została wysłana poprawnie.</p><span onClick={handleClose}>x</span></div></Success>
       <H3 light>Kontakt</H3>
       <Form
         name="contact-recaptcha"
