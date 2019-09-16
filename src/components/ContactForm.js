@@ -291,7 +291,7 @@ export default function ContactForm() {
           <br />
 
           <label htmlFor="">E-mail: <br />
-            <input type="email" name="email" onChange={handleChange} placeholder="email" />
+            <input type="email" name="email" onChange={handleChange} placeholder="email" required />
           </label>
 
           <br /> <label>  <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} /></label>
@@ -302,7 +302,7 @@ export default function ContactForm() {
         <Message>
 
           <br />
-          <textarea name="message" onChange={handleChange} placeholder="Treść wiadomości ..." /> <br />
+          <textarea name="message" onChange={handleChange} placeholder="Treść wiadomości ..." required /> <br />
           <button type="submit">Wyślij wiadomość</button>
 
         </Message>
